@@ -25,8 +25,8 @@ export async function fetchRevenue() {
 
     return data;
   } catch (error) {
-    console.error('Database Error:', error);
-    throw new Error('Failed to fetch revenue data.');
+      console.error('Database Error:', error);
+      throw new Error('Failed to fetch revenue data.');
   }
 }
 
@@ -45,8 +45,8 @@ export async function fetchLatestInvoices() {
     }));
     return latestInvoices;
   } catch (error) {
-    console.error('Database Error:', error);
-    throw new Error('Failed to fetch the latest invoices.');
+      console.error('Database Error:', error);
+      throw new Error('Failed to fetch the latest invoices.');
   }
 }
 
@@ -80,8 +80,8 @@ export async function fetchCardData() {
       totalPendingInvoices,
     };
   } catch (error) {
-    console.error('Database Error:', error);
-    throw new Error('Failed to fetch card data.');
+      console.error('Database Error:', error);
+      throw new Error('Failed to fetch card data.');
   }
 }
 
@@ -116,8 +116,8 @@ export async function fetchFilteredInvoices(
 
     return invoices;
   } catch (error) {
-    console.error('Database Error:', error);
-    throw new Error('Failed to fetch invoices.');
+      console.error('Database Error:', error);
+      throw new Error('Failed to fetch invoices.');
   }
 }
 
@@ -137,8 +137,8 @@ export async function fetchInvoicesPages(query: string) {
     const totalPages = Math.ceil(Number(data[0].count) / ITEMS_PER_PAGE);
     return totalPages;
   } catch (error) {
-    console.error('Database Error:', error);
-    throw new Error('Failed to fetch total number of invoices.');
+      console.error('Database Error:', error);
+      throw new Error('Failed to fetch total number of invoices.');
   }
 }
 
